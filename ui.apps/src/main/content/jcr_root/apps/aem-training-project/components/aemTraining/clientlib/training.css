@@ -1,0 +1,74 @@
+.headline{
+    color: #2c5951;
+    font-size: 25px;
+}
+button{
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+    margin-top: 15px;
+}
+li{
+    list-style-type: none;
+}
+.block{
+    display: inline-block;
+    width: 200px;
+    margin: 15px;
+    vertical-align: top;
+}
+.title, .description{
+    width: 100%;
+    color: #2f6159;
+}
+.title{
+    font-weight: 600;
+    font-size: 20px;
+}
+img{
+    width: 100%;
+    height: 150px;
+}
+.listPage{
+    background: rgba(213, 214, 206, 0.13);
+    margin: 0;
+    display: inline-block;
+}
+.listLink{
+    margin: 15px 5px;
+    background: rgba(251, 117, 141, 0.07);
+    padding: 0;
+    width: 100px;
+}
+.childPage{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #66CDAA;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #2f6159;
+}
+a:hover{
+    background: #008B8B;
+    color: white;
+}
+.dynamicBlock{
+    display: inline-block;
+    width: 400px;
+    background: rgba(213, 214, 206, 0.13);
+    margin: 15px 0;
+}

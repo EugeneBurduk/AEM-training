@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/aem-training-project"/>
+
+
+
+    <filter root="/etc/clientlibs/aem-training-project"/>
+
+
+    <filter root="/etc/designs/aem-training-project">
+        <include pattern="/etc/designs/aem-training-project/jcr:content"/>
+
+    </filter>
+
+</workspaceFilter>

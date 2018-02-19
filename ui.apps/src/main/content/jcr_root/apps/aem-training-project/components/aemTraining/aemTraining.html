@@ -1,0 +1,33 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" /> 
+<sly data-sly-call="${clientlib.css @ categories='myproject.components'}" /> 
+<sly data-sly-call="${clientlib.js @ categories='myproject.components'}" />
+<sly data-sly-use.model = "com.epam.aem.training.models.TrainingModel"/>
+<sly  data-sly-use.logic="script.js"/>
+<div  data-sly-test="${!model.behavior}">${model.headline}</div>
+<div data-sly-test="${model.behavior == 'static'}">
+    <div class="headline">${model.headline}</div>
+    <ul class="listPage" data-sly-test="${properties.Count}" data-sly-list.page="${model.pages}">
+        <button data-sly-test="${pageList.index >= logic.count}" >Show more</button>
+        <li class="block" data-sly-test="${pageList.index < logic.count}">
+            <img src="${page.image}"/>
+            <p class="title">${page.title} </p>
+            <p>${page.image}</p>
+            <p class="description">${page.description}</p>
+        </li>
+    </ul>
+</div>
+<div class="dynamicBlock" data-sly-test="${model.behavior == 'dynamic'}">
+    <div class="headline">${model.headline}</div>
+    <div class="block">
+        <img src="${model.rootPage.image}"/>
+        <p class="title">${model.rootPage.title}</p>
+        <p class="description">${model.rootPage.description}</p>
+    </div>
+        <ul  class="listLink listPage" data-sly-list.page="${model.pages}">
+            <li class="childPage">
+                <a data-sly-text="${page.title}" href="${page.url @ extension = 'html'} "></a>
+            </li>
+        </ul>
+
+</div>
+

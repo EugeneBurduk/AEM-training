@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>Hello Sling Models !!!</title>
+</head>
+<body>
+     <div data-sly-include="/libs/wcm/core/components/init/init.jsp"></div>
+     <img src="${currentPage.path}/jcr:content/image/file"/>
+     <h1>${currentPage.title}</h1>
+     <h4>${currentPage.description}</h4>
+     <div data-sly-resource="${@path='par',resourceType='wcm/foundation/components/parsys'}"></div>
+</body>
+</html>
